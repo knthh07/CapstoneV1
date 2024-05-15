@@ -1,0 +1,21 @@
+.ticket-container {
+    height: 70%;
+    width: 77%;
+    margin-left: 21.5%;
+    margin-top: 2%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, .3) 0 2px 4px 0;
+    display: flex;
+    height: 70vh;
+}
+
+.tickets {
+    justify-content: center;
+    align-items: center; 
+}
+.tickets h2 {
+    margin-left: 20%;
+    margin-top: 20%;
+}
+

@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginPage {
+  display: flex;
+  min-height: 100vh;
+}
+
+.leftSide {
+  flex: 3; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/src/assets/img/jhocsonPic.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.loginLogo {
+  max-width: 50%;
+  margin-top: -50%;
+}
+
+.rightSide {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 15px solid #FFD700;
+  background-color: #403993;
+  padding: 5%;
+  width: 30%; 
+}
+
+.loginForm {
+  background-color: #313A7B;
+  padding: 5%;
+  border-radius: 30px;
+  color: white;
+  width: 100%;
+  text-align: center;
+} 
+
+.loginForm h2 {
+  margin-bottom: 5%;
+  text-decoration: underline;
+  color: aliceblue;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 15%;
+  margin-top: 5%;
+}
+
+.loginForm h1{
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.loginFields {
+  margin: 5% 0;
+}
+
+.loginFields label {
+  margin-bottom: 2%;
+  margin-right: 100%;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+  
+.forgotPassword, .signupLink {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.forgotPassword {
+  display: block;
+  float: right;
+  margin-top: -10%;
+  color: #FFD700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.showPasswordBox{
+  margin-top: 5%;
+  margin-left: -90%;
+}
+
+.loginP {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonLogin {
+  background-color: #13aa52;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20%;
+  margin-bottom: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.buttonLogin:hover {
+  background-color: #10a050;
+}
+
+
+
+@media (min-width: 768px) {
+  .leftSide {
+    flex: 3;
+  }
+  
+  .rightSide {
+    flex: 1;
+    width: 30%; 
+  }
+  
+  .buttonLogin {
+    padding: 3% 13%;
+  }
+}
+/* 
+  
+  
+  
+  
+   */

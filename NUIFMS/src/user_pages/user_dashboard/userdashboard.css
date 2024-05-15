@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    margin-left: 21.5%;
+}
+
+.container > div {
+    min-width: 23%;
+    min-height: 10%;
+    margin-top: 2%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, .3) 0 2px 4px 0;
+}
+
+/* Adjust margin-left for spacing between containers */
+.container > div:not(:first-child) {
+    margin-left: 2%; /* Adjust spacing as needed */
+}
+
