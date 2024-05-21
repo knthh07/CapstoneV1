@@ -1,76 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import './profile.css';
 
 import SideNav from '../../Components/sidenav/SideNav';
 import TopPanel from '../../Components/topPanel/TopPanel';
 
 const Profile = () => {
+    const [isEditable, setIsEditable] = useState(false);
+
+    const handleEditClick = () => {
+        setIsEditable(!isEditable);
+    };
+
     return (
         <div>
             <SideNav />
             <TopPanel />
             <div className="profile-container">
-
                 <div className="profile-banner">
                     <h2>Juan Dela Cruz</h2>
                     <h4> - Admin </h4>
+                    <div className="profile-icon"></div>
                 </div>
 
-                <div className="profile-icon"></div>
-
                 <div className="profile-info">
+                    <h2>Profile</h2>
                     <div className="fields1">
                         <h5>PERSONAL INFORMATION</h5>
-                        <div className="input-box">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" />
+                        <div className="info-box">
+                            <label>Name</label>
+                            <p>{isEditable ? <input type="text" defaultValue="Juan Dela Cruz" /> : "Juan Dela Cruz"}</p>
                         </div>
-                        <div className="input-box">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" placeholder="Your Username" />
+                        <div className="info-box">
+                            <label>Password</label>
+                            <p>{isEditable ? <input type="password" defaultValue="password" /> : "********"}</p>
                         </div>
-                        <div className="input-box">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Your Password" />
-                        </div>
-                        <div className="input-box">
-                            <label for="department">Department</label>
-                            <select id="department" name="department">
-                                <option value="option1">CCIT</option>
-                                <option value="option2">CBA</option>
-                            </select>
+                        <div className="info-box">
+                            <label>Department</label>
+                            <p>{isEditable ? 
+                                <select defaultValue="CCIT">
+                                    <option value="CCIT">CCIT</option>
+                                    <option value="CBA">CBA</option>
+                                </select> 
+                                : "CCIT"}</p>
                         </div>
                     </div>
 
                     <div className="fields2">
                         <h5>CONTACT INFORMATION</h5>
-                        <div className="input-box">
-                            <label for="telephone">Telephone Number</label>
-                            <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" />
+                        <div className="info-box">
+                            <label>Cellphone Number</label>
+                            <p>{isEditable ? <input type="tel" defaultValue="09123456789" /> : "09123456789"}</p>
                         </div>
-                        <div className="input-box">
-                            <label for="cellphone">Cellphone Number</label>
-                            <input type="tel" id="cellphone" name="cellphone" placeholder="Cellphone Number" />
+                        <div className="info-box">
+                            <label>Current Address</label>
+                            <p>{isEditable ? <input type="text" defaultValue="123 Street Name, City" /> : "123 Street Name, City"}</p>
                         </div>
-                        <div className="input-box">
-                            <label for="address">Current Address</label>
-                            <input type="text" id="address" name="address" placeholder="Current Address" />
-                        </div>
-                        <div className="input-box">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Email Address" />
+                        <div className="info-box">
+                            <label>Email</label>
+                            <p>{isEditable ? <input type="email" defaultValue="juan.delacruz@example.com" /> : "juan.delacruz@example.com"}</p>
                         </div>
                     </div>
 
-                    <div className="editButton" >
-                        <input type="submit" value="Edit Profile" className="edit" />
+                    <div className="editButton">
+                        <button onClick={handleEditClick} className="edit">
+                            {isEditable ? "Save Profile" : "Edit Profile"}
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
     );
 };
-
 
 export default Profile;

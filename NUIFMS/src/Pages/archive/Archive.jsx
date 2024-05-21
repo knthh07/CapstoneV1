@@ -1,19 +1,19 @@
 import React from 'react';
-import './tickets.css';
+import './archive.css';
 import SideNav from '../../Components/sidenav/SideNav';
 import TopPanel from '../../Components/topPanel/TopPanel';
-import TicketsPage from '../../Components/Tickets/TicketsPage';
+import ArchivePage from '../../Components/Archive/ArchivePage';
 
-const Tickets = () => {
+const Archive = () => {
     return (
         <div>
             <SideNav />
             <TopPanel />
-            <div className="ticket-container">
-                <TicketsPage />
+            <div className="archives-container">
+                <ArchivePage />
             </div>
         </div>
     );
 };
 
-export default Tickets;
+export default Archive;

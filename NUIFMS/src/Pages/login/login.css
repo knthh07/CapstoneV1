@@ -79,16 +79,10 @@
 .forgotPassword {
   display: block;
   float: right;
-  margin-top: -10%;
   color: #FFD700;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 0.8rem;
-}
-
-.showPasswordBox{
-  margin-top: 5%;
-  margin-left: -90%;
 }
 
 .loginP {

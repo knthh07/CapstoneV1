@@ -6,7 +6,14 @@ import signupLogoSrc from '../../assets/img/nu_banner2.png';
 import './signup.css';
 
 const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const toggleShowPassword = () => {
+    console.log('Toggling password visibility');
+    setShowPassword(!showPassword);
+  };
+
   const [data, setData] = useState({
     name: '',
     address: '',
@@ -22,7 +29,7 @@ const Signup = () => {
     const { name, department, address, contact, email, password, confirmPassword } = data;
     console.log('Submitting form', data); // Add this line for debugging
     try {
-      const response = await axios.post('http://localhost:8000/api/signup', { // Ensure this URL matches your backend
+      const response = await axios.post('http://localhost:5173/api/signup', { // Ensure this URL matches your backend
         name, department, address, contact, email, password, confirmPassword
       });
       const result = response.data;
@@ -104,7 +111,7 @@ const Signup = () => {
 
               <div className="passwordField">
                 <label htmlFor="password">Password</label>
-                <input type="password"
+                <input type={showPassword ? 'text' : 'password'}
                   id="password" name="password"
                   placeholder="Enter your Password"
                   required
@@ -115,7 +122,7 @@ const Signup = () => {
 
               <div className="confirmPasswordField">
                 <label htmlFor="confirmPassword">Confirm Password</label>
-                <input type="password"
+                <input type={showPassword ? 'text' : 'password'}
                   id="confirmPassword"
                   name="confirmPassword"
                   placeholder="Confirm your Password"
@@ -124,12 +131,19 @@ const Signup = () => {
                   onChange={(e) => setData({ ...data, confirmPassword: e.target.value })}
                 />
               </div>
+
+              <input
+                type="checkbox"
+                className='showPasswordBox'
+                checked={showPassword}
+                onChange={toggleShowPassword}
+              />
             </div>
 
             <button type='submit' className="buttonSignup">Sign Up</button>
 
             <p className="signupP">Already have an account?
-              <a href="loginLink" id="loginLink">Log in</a>
+              <a href="/login" id="loginLink">Log in</a>
             </p>
           </div>
         </form>

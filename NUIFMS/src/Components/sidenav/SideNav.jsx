@@ -21,6 +21,7 @@ function SideNav() {
         <Link to="/AdminDashboard">Dashboard</Link>
         <Link to="/request">Requests</Link>
         <Link to="/tickets">Tickets</Link>
+        <Link to="/archive">Archive</Link>
         <Link to="/feedback">Feedback</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/report">Report</Link>

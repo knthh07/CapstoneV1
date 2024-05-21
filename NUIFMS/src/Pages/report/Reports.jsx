@@ -9,11 +9,8 @@ const Settings = () => {
         <div className="reports-div">
             <SideNav />
             <TopPanel />
-            <div className="title-container">
-                <h2>Report</h2>
-            </div>
-
             <div className="reports-container">
+                <h2>Report</h2>
                 <div className="repbutton">
                     <input type="submit" value="Generate Report" className="reportButton" />
                 </div>

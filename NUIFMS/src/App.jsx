@@ -8,8 +8,12 @@ import Requests from "./Pages/requests/Requests";
 import Feedback from "./Pages/feedback/Feedback";
 import Profile from "./Pages/profile/Profile";
 import Report from "./Pages/report/Reports";
+import Archive from "./Pages/archive/Archive";
 import UserDashboard from "./user_pages/user_dashboard/UserDashboard";
 import UserTicket from "./user_pages/user_ticket/UserTicket";
+import UserProfile from "./user_pages/user_profile/UserProfile";
+import UserFeedback from "./user_pages/user_feedback/UserFeedback";
+import UserHistory from "./user_pages/user_history/UserHistory";
 
 const App = () => {
   return (
@@ -25,6 +29,7 @@ const App = () => {
           <Route path="/AdminDashboard" element={<Dashboard/>} />
           <Route path="/tickets" element={<Tickets/>} />
           <Route path="/request" element={<Requests/>} />
+          <Route path="/archive" element={<Archive/>} />
           <Route path="/feedback" element={<Feedback/>} />
           <Route path="/profile" element={<Profile/>} />
           <Route path="/report" element={<Report/>} />
@@ -32,6 +37,9 @@ const App = () => {
           {/* User Side Interface */}
           <Route path="/UserDashboard" element={<UserDashboard/>} />
           <Route path="/UserTicket" element={<UserTicket/>} />
+          <Route path="/UserFeedback" element={<UserFeedback/>} />
+          <Route path="/UserHistory" element={<UserHistory/>} />
+          <Route path="/UserProfile" element={<UserProfile/>} />
 
         </Routes>
       </div>

@@ -18,8 +18,11 @@ function UserSideNav() {
         <img src={logo} alt={'NU LOGO'}></img>
       </div>
       <nav className='usernavlinks'>
-        <Link to="/UserTicket">Ticket</Link>
+        <Link to="/UserTicket">Create Ticket</Link>
+        <Link to="/UserFeedback">Submit Feedback</Link>
+        <Link to="/UserHistory">View History</Link>
         <Link to="/UserProfile">Profile</Link>
+
       </nav>
 
       <div className="userSignoutButton">
